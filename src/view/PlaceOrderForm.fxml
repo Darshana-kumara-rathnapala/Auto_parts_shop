@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="821.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFormController">
+   <children>
+      <TableView fx:id="tblOrder" layoutX="18.0" layoutY="359.0" prefHeight="392.0" prefWidth="801.0">
+        <columns>
+          <TableColumn fx:id="clmInvoiceNo" prefWidth="160.0" text="Invoice no" />
+            <TableColumn fx:id="clmBarcode" prefWidth="160.0" text="Barcode" />
+            <TableColumn fx:id="cmDescription" prefWidth="160.0" text="Desciption" />
+            <TableColumn fx:id="clmQty" prefWidth="160.0" text="QTY" />
+            <TableColumn fx:id="clmPrice" prefWidth="160.0" text="Price (Rs)" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbEnployeeId" labelFloat="true" layoutX="21.0" layoutY="82.0" prefHeight="31.0" prefWidth="217.0" promptText="select your ID">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtEnterBarcode" labelFloat="true" layoutX="307.0" layoutY="122.0" onKeyPressed="#pressEnterAction" prefHeight="31.0" prefWidth="197.0" promptText="enter Item barcode">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="567.0" layoutY="127.0" prefHeight="16.0" prefWidth="165.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Description">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUnitPrice" alignment="CENTER" layoutX="567.0" layoutY="204.0" prefHeight="16.0" prefWidth="165.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Unit price">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtQtyForCustomer" labelFloat="true" layoutX="310.0" layoutY="199.0" prefHeight="31.0" prefWidth="197.0" promptText="Qty for customer">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblInvoiceNo" layoutX="24.0" layoutY="23.0" prefHeight="31.0" prefWidth="105.0" text="Invoice no">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="767.0" prefHeight="46.0" prefWidth="65.0" text="Totle =">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotlePrice" layoutX="83.0" layoutY="768.0" prefHeight="46.0" prefWidth="65.0" text="0.0/=">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="550.0" layoutY="13.0" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 30;" text="Date">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="683.0" layoutY="13.0" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 30;" text="Time">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="506.0" layoutY="308.0" onAction="#btnAddToCartOnAction" prefHeight="39.0" prefWidth="123.0" style="-fx-background-color: #3c6382;" text="Add to cart" textFill="#fffbfb">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></JFXButton>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="644.0" layoutY="310.0" onAction="#btnClearOnAction" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #3c6382;" text="Clear" textFill="#fffbfb">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></JFXButton>
+      <Separator layoutX="835.0" layoutY="30.0" orientation="VERTICAL" prefHeight="783.0" prefWidth="2.0" style="-fx-background-color: black;" />
+      <Separator layoutX="1014.0" layoutY="35.0" prefHeight="4.0" prefWidth="343.0" style="-fx-background-color: black;" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="841.0" layoutY="23.0" prefHeight="21.0" prefWidth="165.0" text="Bill info">
+         <font>
+            <Font name="Castellar" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="1015.0" layoutY="63.0" prefHeight="29.0" prefWidth="197.0" text="Darshana Vehicle Parts">
+         <font>
+            <Font name="Calibri Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="1064.0" layoutY="83.0" prefHeight="29.0" prefWidth="82.0" text="no. 70/1,">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1056.0" layoutY="100.0" prefHeight="29.0" prefWidth="98.0" text="Karapitiya,">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1073.0" layoutY="118.0" prefHeight="29.0" prefWidth="53.0" text="Galle.">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="852.0" layoutY="193.0" prefHeight="29.0" prefWidth="105.0" text="Invoice No :">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1194.0" layoutY="195.0" prefHeight="29.0" prefWidth="65.0" text="Pay ID:">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="billPayCode" layoutX="1259.0" layoutY="195.0" prefHeight="29.0" prefWidth="90.0" text="P-01">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="billInvoiceNo" layoutX="951.0" layoutY="195.0" prefHeight="29.0" prefWidth="90.0" text="O-01">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1053.0" layoutY="135.0" prefHeight="29.0" prefWidth="98.0" text="070562894">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="billLblDate" layoutX="1053.0" layoutY="152.0" prefHeight="29.0" prefWidth="98.0" text="2021-09-14">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="billLblTime" layoutX="1071.0" layoutY="174.0" prefHeight="29.0" prefWidth="65.0" text="15.56">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="billTable" layoutX="851.0" layoutY="242.0" prefHeight="372.0" prefWidth="499.0">
+        <columns>
+          <TableColumn fx:id="billclmBarcode" prefWidth="93.0" text="Barcode" />
+            <TableColumn fx:id="billclmDescription" prefWidth="97.0" text="Description" />
+            <TableColumn fx:id="billclmUnitPrice" prefWidth="104.0" text="Unit price" />
+            <TableColumn fx:id="billclmQty" prefWidth="109.0" text="Qty" />
+            <TableColumn fx:id="billclmAmount" prefWidth="95.0" text="Amount" />
+        </columns>
+      </TableView>
+      <Label layoutX="850.0" layoutY="614.0" prefHeight="31.0" prefWidth="246.0" text="Totle amount                        :">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="852.0" layoutY="638.0" prefHeight="31.0" prefWidth="246.0" text="Discount                              :">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="851.0" layoutY="753.0" prefHeight="4.0" prefWidth="499.0" style="-fx-background-color: black;" />
+      <Line endX="397.0" layoutX="951.0" layoutY="723.0" startX="-100.0" />
+      <Label layoutX="854.0" layoutY="725.0" prefHeight="31.0" prefWidth="246.0" text="Change                                :">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="645.0" layoutY="759.0" onAction="#btnPlaceOrderOnAction" prefHeight="39.0" prefWidth="173.0" style="-fx-background-color: #38ada9;" text="Place order" textFill="#fffbfb">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="billLblTot" alignment="CENTER_RIGHT" layoutX="1236.0" layoutY="614.0" prefHeight="31.0" prefWidth="105.0" text="2500">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="1236.0" layoutY="638.0" prefHeight="31.0" prefWidth="105.0" text="0">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="billLblBalance" alignment="CENTER_RIGHT" layoutX="1236.0" layoutY="724.0" prefHeight="31.0" prefWidth="105.0" text="500">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="1201.0" layoutY="765.0" onAction="#btnClearOnAction" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: #60a3bc; -fx-background-radius: 30;" text="Print Bill" textFill="#fffbfb">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <FontAwesomeIconView fill="#f5ecec" glyphName="CART_ARROW_DOWN" layoutX="513.0" layoutY="333.0" size="20" />
+      <FontAwesomeIconView fill="#f2eded" glyphName="TRASH" layoutX="656.0" layoutY="335.0" size="20" />
+      <FontAwesomeIconView glyphName="MONEY" layoutX="661.0" layoutY="787.0" size="25" />
+      <FontAwesomeIconView glyphName="PRINT" layoutX="1215.0" layoutY="794.0" size="25" />
+      <Label layoutX="852.0" layoutY="690.0" prefHeight="31.0" prefWidth="246.0" text="Cash                                    :">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="billLblCash" alignment="CENTER_RIGHT" layoutX="1236.0" layoutY="690.0" prefHeight="31.0" prefWidth="105.0" text="3000">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="853.0" layoutY="666.0" prefHeight="31.0" prefWidth="246.0" text="Net amount                          :">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="billLblNetTot" alignment="CENTER_RIGHT" layoutX="1235.0" layoutY="666.0" prefHeight="31.0" prefWidth="105.0" text="2500">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtcashAmount" layoutX="459.0" layoutY="771.0" prefHeight="31.0" prefWidth="144.0" promptText="cash amount" />
+   </children>
+</AnchorPane>

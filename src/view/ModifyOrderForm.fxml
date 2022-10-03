@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="821.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyOrderFormController">
+   <children>
+      <TextField fx:id="txtEnterInvoiceNo" layoutX="141.0" layoutY="72.0" prefHeight="33.0" prefWidth="201.0" promptText="enter invoice no" />
+      <TableView fx:id="tblInvoice" layoutX="81.0" layoutY="323.0" prefHeight="451.0" prefWidth="1070.0">
+        <columns>
+          <TableColumn fx:id="clmBarcode" prefWidth="178.0" text="Barcode" />
+            <TableColumn fx:id="clmDate" prefWidth="178.0" text="Date" />
+            <TableColumn fx:id="clmTime" prefWidth="178.0" text="Time" />
+            <TableColumn fx:id="clmDescription" prefWidth="178.0" text="Item Description" />
+            <TableColumn fx:id="clmUnitPrice" prefWidth="178.0" text="Unit Price" />
+            <TableColumn fx:id="clmQtyForCustomer" prefWidth="178.0" text="Qty for customer" />
+        </columns>
+      </TableView>
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="357.0" layoutY="99.0" onMouseClicked="#searchInvoice" size="25">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></FontAwesomeIconView>
+      <TextField fx:id="txtUnitPrice" alignment="CENTER" layoutX="268.0" layoutY="222.0" prefHeight="33.0" prefWidth="201.0" promptText="unit price" style="-fx-border-color: black;" />
+      <TextField fx:id="txtQtyForCustomer" alignment="CENTER" layoutX="625.0" layoutY="222.0" prefHeight="33.0" prefWidth="201.0" promptText="qty for customer" style="-fx-border-color: black;" />
+      <Label fx:id="txtBarcode" alignment="CENTER" layoutX="268.0" layoutY="149.0" prefHeight="33.0" prefWidth="201.0" style="-fx-border-color: black; -fx-background-color: white;" text="  barcode" textFill="#b29e9e" />
+      <Label fx:id="txtDescription" alignment="CENTER" layoutX="625.0" layoutY="149.0" prefHeight="33.0" prefWidth="201.0" style="-fx-border-color: black; -fx-background-color: white;" text="  description" textFill="#b2a0a0" />
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="919.0" layoutY="119.0" onAction="#bntUpadte" prefHeight="61.0" prefWidth="87.0" style="-fx-background-color: #78e08f; -fx-background-radius: 15;" text="Upadte">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="919.0" layoutY="208.0" onAction="#btnCancel" prefHeight="61.0" prefWidth="87.0" style="-fx-background-color: #38ada9; -fx-background-radius: 15;" text="Cancel">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="821.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyTransactionFormController">
+   <children>
+      <Separator layoutX="155.0" layoutY="122.0" prefHeight="0.0" prefWidth="907.0" style="-fx-background-color: black;" />
+      <Separator layoutX="258.0" layoutY="129.0" orientation="VERTICAL" prefHeight="683.0" prefWidth="2.0" style="-fx-background-color: black;" />
+      <Separator layoutX="268.0" layoutY="724.0" prefHeight="0.0" prefWidth="907.0" style="-fx-background-color: black;" />
+      <Separator layoutX="1067.0" layoutY="37.0" orientation="VERTICAL" prefHeight="683.0" prefWidth="2.0" style="-fx-background-color: black;" />
+      <TextField fx:id="txtSearchInvoiceNo" alignment="CENTER" layoutX="535.0" layoutY="192.0" onKeyPressed="#searchFromEnter" prefHeight="25.0" prefWidth="229.0" promptText="search invoice number" style="-fx-border-color: black;" />
+      <Label fx:id="lblPayCode" alignment="CENTER" layoutX="535.0" layoutY="274.0" prefHeight="33.0" prefWidth="229.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: white;" text="Pay  code" />
+      <Label fx:id="lblTotleAmount" alignment="CENTER" layoutX="535.0" layoutY="342.0" prefHeight="33.0" prefWidth="229.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: white;" text="Totle amount" />
+      <FontAwesomeIconView fx:id="searchId" fill="#1e00ff" glyphName="SEARCH" layoutX="774.0" layoutY="219.0" onMouseClicked="#searchOnAction" size="25">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor></FontAwesomeIconView>
+      <Label fx:id="lblBalance" alignment="CENTER" layoutX="535.0" layoutY="547.0" prefHeight="33.0" prefWidth="229.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: white;" text="Balance" />
+      <TextField fx:id="txtDiscount" alignment="CENTER" layoutX="535.0" layoutY="411.0" onKeyPressed="#discountEnterOnAction" prefHeight="33.0" prefWidth="229.0" promptText="Discount" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" />
+      <TextField fx:id="txtCash" alignment="CENTER" layoutX="535.0" layoutY="482.0" onKeyPressed="#cashEnterOnAction" prefHeight="33.0" prefWidth="229.0" promptText="Cash" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" />
+      <JFXButton buttonType="RAISED" layoutX="883.0" layoutY="327.0" onAction="#btnUpdate" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #3867d6; -fx-border-color: #4b7bec; -fx-background-radius: 20; -fx-border-radius: 20;" text="Update">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font name="Eras Bold ITC" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="883.0" layoutY="428.0" onAction="#btnCancel" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #4b7bec; -fx-border-color: #4b7bec; -fx-background-radius: 20; -fx-border-radius: 20;" text="Cancel">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font name="Eras Bold ITC" size="18.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="#20d300" glyphName="ARROW_CIRCLE_UP" layoutX="892.0" layoutY="365.0" size="25" />
+      <FontAwesomeIconView fill="#f80b0b" glyphName="CLOSE" layoutX="896.0" layoutY="464.0" size="25" />
+   </children>
+</AnchorPane>

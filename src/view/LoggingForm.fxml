@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="894.0" prefWidth="1605.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoggingFormController">
+   <children>
+      <ImageView fitHeight="945.0" fitWidth="1622.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assert/1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="291.0" fitWidth="245.0" layoutX="1230.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assert/2.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtUserName" focusColor="#3742fa" labelFloat="true" layoutX="1275.0" layoutY="408.0" prefHeight="44.0" prefWidth="245.0" promptText="Enter User Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="#3742fa" labelFloat="true" layoutX="1275.0" layoutY="502.0" prefHeight="44.0" prefWidth="245.0" promptText="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton buttonType="RAISED" layoutX="1312.0" layoutY="664.0" onAction="#btnSignIn" prefHeight="44.0" prefWidth="172.0" style="-fx-background-color: #5352ed; -fx-background-radius: 70;" text="Sign In" textFill="#f2ecec">
+         <font>
+            <Font name="Eras Medium ITC" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="24.0" layoutY="859.0" prefHeight="21.0" prefWidth="142.0" text="version 1.0.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="adminAsID" layoutX="1275.0" layoutY="574.0" mnemonicParsing="false" onMouseClicked="#adminAsMouseClick" prefHeight="30.0" prefWidth="142.0" text="Log as Admin">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

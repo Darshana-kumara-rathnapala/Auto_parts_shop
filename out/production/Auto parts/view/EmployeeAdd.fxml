@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootEmployee" prefHeight="700.0" prefWidth="1391.0" style="-fx-border-color: black; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeAddController">
+   <children>
+      <JFXTextField fx:id="txtEmployeeNic" labelFloat="true" layoutX="258.0" layoutY="85.0" prefHeight="39.0" prefWidth="360.0" promptText="Employee NIC">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmployeeName" labelFloat="true" layoutX="258.0" layoutY="182.0" prefHeight="39.0" prefWidth="360.0" promptText="Emloyee Name">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmployeeAddress" labelFloat="true" layoutX="258.0" layoutY="275.0" prefHeight="39.0" prefWidth="360.0" promptText="Employee Address">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmployeeSalaryAmount" labelFloat="true" layoutX="258.0" layoutY="459.0" prefHeight="39.0" prefWidth="360.0" promptText="Salary Amount">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmployeeContact" labelFloat="true" layoutX="258.0" layoutY="366.0" prefHeight="39.0" prefWidth="360.0" promptText="Employee Contact">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="472.0" layoutY="533.0" onAction="#btnRegisterEmployee" prefHeight="49.0" prefWidth="128.0" style="-fx-background-color: #dfe6e9; -fx-background-radius: 40;" text="Register">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></JFXButton>
+      <Separator layoutX="716.0" layoutY="24.0" orientation="VERTICAL" prefHeight="664.0" prefWidth="0.0" style="-fx-background-color: #b2bec3;" />
+      <Separator layoutX="722.0" layoutY="24.0" prefHeight="14.0" prefWidth="586.0" style="-fx-background-color: #b2bec3;" />
+      <Separator layoutX="1305.0" layoutY="26.0" orientation="VERTICAL" prefHeight="664.0" prefWidth="0.0" style="-fx-background-color: #b2bec3;" />
+      <JFXButton buttonType="RAISED" layoutX="1144.0" layoutY="202.0" onAction="#btnSearchEmployee" prefHeight="49.0" prefWidth="117.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Search">
+         <font>
+            <Font name="Bodoni MT Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <FontAwesomeIconView fill="#354dd3" glyphName="SEARCH" layoutX="1148.0" layoutY="232.0" size="20" />
+      <JFXButton buttonType="RAISED" layoutX="1144.0" layoutY="296.0" onAction="#btnUpdateEmployee" prefHeight="49.0" prefWidth="117.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Update">
+         <font>
+            <Font name="Bodoni MT Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1144.0" layoutY="393.0" onAction="#bntDeleteEmployee" prefHeight="49.0" prefWidth="117.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Delete">
+         <font>
+            <Font name="Bodoni MT Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <FontAwesomeIconView glyphName="UPLOAD" layoutX="1148.0" layoutY="327.0" size="20">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#1db24e" />
+                  <Stop color="#1e8340" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fill="#da1414" glyphName="TRASH" layoutX="1153.0" layoutY="422.0" size="20" text="" />
+      <FontAwesomeIconView fill="#1c2240" glyphName="PENCIL" layoutX="484.0" layoutY="566.0" size="20" />
+      <ImageView fitHeight="242.0" fitWidth="235.0" layoutX="3.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assert/17.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="845.0" layoutY="142.0" prefHeight="464.0" prefWidth="268.0" spacing="50.0">
+         <children>
+            <TextField fx:id="txtSearchNic" promptText="enter NIC" style="-fx-border-color: black;" />
+            <TextField fx:id="txtSearchName" promptText="name" style="-fx-border-color: black;" />
+            <TextField fx:id="txtSearchAddress" promptText="address" style="-fx-border-color: black;" />
+            <TextField fx:id="txtSearchContact" promptText="contact" style="-fx-border-color: black;" />
+            <TextField fx:id="txtSearchSalaryAmount" promptText="salary amount" style="-fx-border-color: black;" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="821.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RemoveOrderFormController">
+   <children>
+      <Separator layoutX="130.0" layoutY="85.0" prefHeight="6.0" prefWidth="1014.0" style="-fx-background-color: black;" />
+      <Separator layoutX="216.0" layoutY="96.0" orientation="VERTICAL" prefHeight="717.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <Separator layoutX="1148.0" layoutY="9.0" orientation="VERTICAL" prefHeight="717.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <Separator layoutX="228.0" layoutY="730.0" prefHeight="6.0" prefWidth="1023.0" style="-fx-background-color: black;" />
+      <TextField fx:id="txtEnterInvoiceNumber" alignment="CENTER" layoutX="532.0" layoutY="162.0" prefHeight="37.0" prefWidth="279.0" promptText="enter Invoice number" style="-fx-border-color: #8395a7;" />
+      <FontAwesomeIconView fill="#380cff" glyphName="SEARCH" layoutX="824.0" layoutY="194.0" onMouseClicked="#searchOnAction" size="25" text="">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Label fx:id="lblOrderDate" alignment="CENTER" layoutX="532.0" layoutY="247.0" prefHeight="37.0" prefWidth="279.0" style="-fx-border-color: #8395a7;" text="Order date" />
+      <Label fx:id="lblItemeAmount" alignment="CENTER" layoutX="532.0" layoutY="417.0" prefHeight="37.0" prefWidth="279.0" style="-fx-border-color: #8395a7;" text="Amount of item" />
+      <Label fx:id="lblOrderTime" alignment="CENTER" layoutX="532.0" layoutY="331.0" prefHeight="37.0" prefWidth="279.0" style="-fx-border-color: #8395a7;" text="Order time" />
+      <Label fx:id="lblPrice" alignment="CENTER" layoutX="532.0" layoutY="505.0" prefHeight="37.0" prefWidth="279.0" style="-fx-border-color: #8395a7;" text="Totle price" />
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="548.0" layoutY="574.0" onAction="#btnRemove" prefHeight="53.0" prefWidth="115.0" style="-fx-background-color: #38ada9; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;" text="Remove" textFill="#fffbfb">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="678.0" layoutY="574.0" onAction="#bntCancel" prefHeight="53.0" prefWidth="115.0" style="-fx-background-color: #60a3bc; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;" text="Cancel" textFill="#fffbfb">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="#0cff2c" glyphName="TRASH" layoutX="562.0" layoutY="609.0" size="20" />
+      <FontAwesomeIconView fill="#c62929" glyphName="REMOVE" layoutX="697.0" layoutY="606.0" size="20" />
+   </children>
+</AnchorPane>

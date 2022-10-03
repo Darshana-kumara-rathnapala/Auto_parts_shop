@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1391.0" style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+   <children>
+      <TextField fx:id="txtBarcode" layoutX="86.0" layoutY="33.0" prefHeight="23.0" prefWidth="194.0" promptText="Barcode" style="-fx-border-color: black;">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDescription" layoutX="352.0" layoutY="33.0" prefHeight="36.0" prefWidth="277.0" promptText="Description" style="-fx-border-color: black;">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtQuantity" layoutX="696.0" layoutY="33.0" prefHeight="16.0" prefWidth="169.0" promptText="Quantity" style="-fx-border-color: black;">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCost" layoutX="130.0" layoutY="98.0" prefHeight="36.0" prefWidth="94.0" promptText="Cost" style="-fx-border-color: black;">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="90.0" layoutY="106.0" prefHeight="36.0" prefWidth="41.0" text="RS :">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="109.0" prefHeight="36.0" prefWidth="35.0" text=".00">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="90.0" layoutY="162.0" prefHeight="3.0" prefWidth="334.0" style="-fx-background-color: #7f8fa6;" />
+      <Separator layoutX="532.0" layoutY="164.0" prefHeight="3.0" prefWidth="326.0" style="-fx-background-color: #7f8fa6;" />
+      <Label layoutX="437.0" layoutY="146.0" prefHeight="36.0" prefWidth="105.0" text="Aditional" textFill="#7f8fa6">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSuplierNic" labelFloat="true" layoutX="91.0" layoutY="210.0" promptText="Suplier NIC">
+         <font>
+            <Font name="Bodoni MT Black Italic" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSuplierName" labelFloat="true" layoutX="414.0" layoutY="210.0" prefHeight="34.0" prefWidth="194.0" promptText="Suplier name">
+         <font>
+            <Font name="Bodoni MT Black Italic" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSuplierContact" labelFloat="true" layoutX="91.0" layoutY="278.0" prefHeight="34.0" prefWidth="225.0" promptText="Suplier contact">
+         <font>
+            <Font name="Bodoni MT Black Italic" size="18.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="itemTable" layoutX="90.0" layoutY="349.0" prefHeight="273.0" prefWidth="767.0">
+        <columns>
+          <TableColumn fx:id="clmBarcode" prefWidth="119.0" text="Barcode" />
+          <TableColumn fx:id="clmDescription" prefWidth="130.0" text="Descripton" />
+            <TableColumn fx:id="clmQuantitiy" prefWidth="130.0" text="Quantity" />
+            <TableColumn fx:id="clmCost" prefWidth="130.0" text="Cost" />
+            <TableColumn fx:id="clmBroughtId" prefWidth="130.0" text="Brought Id" />
+            <TableColumn fx:id="clmBroughtDate" prefWidth="130.0" text="Brought Date" />
+        </columns>
+      </TableView>
+      <Separator layoutX="922.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="3.0" style="-fx-background-color: #718093;" />
+      <Separator layoutX="1374.0" layoutY="182.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="3.0" style="-fx-background-color: #718093;" />
+      <Separator layoutX="922.0" layoutY="174.0" prefHeight="5.0" prefWidth="457.0" style="-fx-background-color: #718093;" />
+      <TextField fx:id="txtSearchBarcode" layoutX="985.0" layoutY="240.0" prefHeight="23.0" prefWidth="239.0" promptText="enter barcode" style="-fx-border-color: black;">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtSearchDescription" layoutX="985.0" layoutY="328.0" prefHeight="23.0" prefWidth="239.0" promptText="descrption" style="-fx-border-color: black;">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtSearchQuantity" layoutX="985.0" layoutY="409.0" prefHeight="23.0" prefWidth="239.0" promptText="quantoty" style="-fx-border-color: black;">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtSearchCost" layoutX="985.0" layoutY="494.0" prefHeight="23.0" prefWidth="239.0" promptText="cost" style="-fx-border-color: black;">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="1252.0" layoutY="300.0" onAction="#btnSearch" prefHeight="36.0" prefWidth="112.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Search">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="Bodoni MT Black Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="1251.0" layoutY="372.0" onAction="#btnUpdate" prefHeight="36.0" prefWidth="112.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Update">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="Bodoni MT Black Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="1249.0" layoutY="452.0" onAction="#bntDelete" prefHeight="36.0" prefWidth="112.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Delete">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="Bodoni MT Black Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="#4e64e1" glyphName="SEARCH" layoutX="1259.0" layoutY="326.0" size="20" />
+      <FontAwesomeIconView fill="#3fcd6a" glyphName="UPLOAD" layoutX="1259.0" layoutY="396.0" size="20" />
+      <FontAwesomeIconView fill="#d34b16" glyphName="TRASH" layoutX="1263.0" layoutY="477.0" size="20" />
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="566.0" layoutY="299.0" onAction="#btnAddTableOnnAction" prefHeight="36.0" prefWidth="156.0" style="-fx-border-color: #74b9ff; -fx-border-radius: 10;" text="Add to table">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="740.0" layoutY="299.0" onAction="#btnClearOnAction" prefHeight="36.0" prefWidth="112.0" style="-fx-border-color: #74b9ff; -fx-border-radius: 10;" text="clear">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <FontAwesomeIconView fill="#d01a1a" glyphName="TRASH" layoutX="751.0" layoutY="326.0" size="23" />
+      <ImageView fitHeight="167.0" fitWidth="194.0" layoutX="1088.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assert/16.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="720.0" layoutY="639.0" onAction="#btnAddStoreOnAction" prefHeight="36.0" prefWidth="139.0" style="-fx-border-color: #74b9ff; -fx-border-radius: 10;" text="Add Store">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <FontAwesomeIconView fill="#009e20" glyphName="SAVE" layoutX="726.0" layoutY="664.0" size="23" />
+      <FontAwesomeIconView fill="#16ae32" glyphName="CART_ARROW_DOWN" layoutX="570.0" layoutY="325.0" size="24" />
+   </children>
+</AnchorPane>

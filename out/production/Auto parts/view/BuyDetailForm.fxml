@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="562.0" prefWidth="625.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BuyDetailFormController">
+   <children>
+      <TableView fx:id="tblBuy" layoutX="11.0" layoutY="203.0" prefHeight="303.0" prefWidth="601.0" style="-fx-border-color: #341f97;">
+        <columns>
+          <TableColumn fx:id="clmBuy_id" prefWidth="144.0" text="Buy ID" />
+          <TableColumn fx:id="clmCost" prefWidth="160.0" text="Cost" />
+            <TableColumn fx:id="clmPayment" prefWidth="147.0" text="Payment cash" />
+            <TableColumn fx:id="clmBalance" prefWidth="149.0" text="Balance" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="194.0" fitWidth="248.0" layoutX="184.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assert/20.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblCost" alignment="CENTER" layoutX="159.0" layoutY="506.0" prefHeight="39.0" prefWidth="161.0" style="-fx-border-color: black;" text="Label" />
+      <Label fx:id="lblPayment" alignment="CENTER" layoutX="320.0" layoutY="506.0" prefHeight="39.0" prefWidth="146.0" style="-fx-border-color: black;" text="Label" />
+      <Label fx:id="lblBalance" alignment="CENTER" layoutX="466.0" layoutY="506.0" prefHeight="39.0" prefWidth="146.0" style="-fx-border-color: black;" text="Label" />
+      <Label alignment="CENTER" layoutX="11.0" layoutY="506.0" prefHeight="39.0" prefWidth="148.0" style="-fx-border-color: black;" text="totle" />
+   </children>
+</AnchorPane>
